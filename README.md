@@ -1,6 +1,6 @@
 # racebets-app
 
-> A test app for Racebets
+> A test app for Racebets.com
 
 ## Build Setup
 
