@@ -1,38 +1,23 @@
 <template>
   <div>
-    <div class="block">
-      <b-checkbox v-model="RaceFilters"
-          native-value="Silver">
-          Silver
-      </b-checkbox>
-      <b-checkbox v-model="RaceFilters"
-          native-value="Flint">
-          Flint
-      </b-checkbox>
-      <b-checkbox v-model="RaceFilters"
-          native-value="Vane">
-          Vane
-      </b-checkbox>
-      <b-checkbox v-model="RaceFilters"
-          native-value="Billy">
-          Billy
-      </b-checkbox>
+    <div class="block" v-for="race in raceFilters" :key="race.id">
+      <h4>{{race.type}}</h4>
+      <button @click="viewRace(race)">View</button>
     </div>
-    {{RaceFilters}}
   </div>
 </template>
 
 <script>
 export default {
   name: 'RaceFilters',
-  data () {
-    return {
-      filter: []
+  computed: {
+    raceFilters() {
+      return this.$store.getters.raceTypes
     }
   },
   methods: {
-    RaceFilters() {
-      this.filter
+    viewRace(race) {
+      this.$store.dispatch('viewRace', race.id)
     }
   }
 }

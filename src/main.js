@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import Buefy from 'buefy'
+import { store } from './store/store'
 import 'buefy/lib/buefy.css'
 
 Vue.use(Buefy)
@@ -12,6 +13,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   components: { App },
   template: '<App/>'
 })

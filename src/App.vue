@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <Home/>
+    <app-nextRaces></app-nextRaces>
+    <app-raceFilters></app-raceFilters>
   </div>
 </template>
 
 <script>
-import Home from './components/Home'
+import NextRaces from './components/NextRaces'
+import RaceFilters from '/components/RaceFilters'
 
 export default {
   name: 'App',
   components: {
-    Home
+    appNextRaces: NextRaces,
+    appRaceFilters: RaceFilters
   }
 }
 </script>
