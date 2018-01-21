@@ -1,8 +1,14 @@
 <template>
   <div>
-    <div class="block" v-for="race in raceFilters" :key="race.id">
-      <h4>{{race.type}}</h4>
-      <button @click="viewRace(race)">View</button>
+    <div class="block">
+      <div class="field has-addons">
+        <p class="control">
+          <a class="button" @click="viewRace(race)" v-for="race in raceFilters" :key="race.id">
+                  <svgicon icon="/race-type-G" width="22" height="18" color="#0f2"></svgicon>
+            <span>{{race.type}}</span>
+          </a>
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -11,13 +17,14 @@
 export default {
   name: 'RaceFilters',
   computed: {
-    raceFilters() {
+    raceFilters () {
       return this.$store.getters.raceTypes
     }
   },
   methods: {
-    viewRace(race) {
+    viewRace (race) {
       this.$store.dispatch('viewRace', race.id)
+      console.log('viewRace click Event')
     }
   }
 }

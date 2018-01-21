@@ -1,36 +1,43 @@
 <template>
   <div>
-    <div class="summary">
-            <h3>Registrations</h3>
-            <h5>Total: {{ total }}</h5>
-        </div>
     <div v-for="race in nextRaces" :key="race.id">
-      <h4>{{ race.type }}</h4>
-      <span @click="removeRace(activeRace)">(Unregister)</span>
-      <ul>
-        <li><img class="card-img-top" :src="'/static/silks/' + race.runners[0].silk">{{race.runners[0].name}}</li>
-      </ul>
+      <h4>{{ race.raceId }}</h4>
+      <h4>{{race.raceType}}</h4>
+      <h4>{{race.racePurse}}</h4>
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import moment from 'moment'
+import get from 'lodash/get'
 
 export default {
   name: 'NextRaces',
+  data () {
+    return {
+      get,
+      formatDate: (date) => moment(date).format('MM-DD-YYYY')
+    }
+  },
   methods: {
-    removeRace(activeRace) {
+    removeRace (race) {
       this.$store.commit({
         type: 'removeRace',
-        raceId: activeRace.raceId
+        raceId: race.raceId
       })
     }
   },
   computed: {
     ...mapGetters({
-        nextRaces: 'nextRaces',
-        results: 'results'
+      nextRaces: 'nextRaces',
+      results: 'results'
+    })
+  },
+  created (response) {
+    this.$store.dispatch('fetchRaceData').then(() => {
+      console.log('Axios Call inside NextRace component')
     })
   }
 }

@@ -5,6 +5,9 @@ import App from './App'
 import Buefy from 'buefy'
 import { store } from './store/store'
 import 'buefy/lib/buefy.css'
+import VueSVGIcon from 'vue-svgicon'
+
+Vue.use(VueSVGIcon)
 
 Vue.use(Buefy)
 

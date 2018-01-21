@@ -4,6 +4,9 @@ export default {
       return !race.active
     })
   },
+  fetchRaceData (state) {
+    return state.fetchRaceData
+  },
   nextRaces (state) {
     return state.nextRaces
   },
