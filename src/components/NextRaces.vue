@@ -1,10 +1,13 @@
 <template>
   <div>
+    <h4 class="title is-4">Next Races</h4>
     <div v-for="race in nextRaces" :key="race.id">
       <h4>{{ race.raceId }}</h4>
       <h4>{{race.raceType}}</h4>
       <h4>{{race.racePurse}}</h4>
+      <hr>
     </div>
+      Race details {{ $store.state.race }}<br>
   </div>
 </template>
 
@@ -21,21 +24,10 @@ export default {
       formatDate: (date) => moment(date).format('MM-DD-YYYY')
     }
   },
-  methods: {
-    removeRace (race) {
-      this.$store.commit({
-        type: 'removeRace',
-        raceId: race.raceId
-      })
-    }
-  },
   computed: {
-    ...mapGetters({
-      nextRaces: 'nextRaces',
-      results: 'results'
-    })
+    ...mapGetters(['nextRaces', 'results', 'fetchRaceData'])
   },
-  created (response) {
+  created () {
     this.$store.dispatch('fetchRaceData').then(() => {
       console.log('Axios Call inside NextRace component')
     })
@@ -58,5 +50,10 @@ li {
 }
 a {
   color: #42b983;
+  }
+
+.h3 {
+  font-size: 25px;
+  font-weight: bold;
 }
 </style>

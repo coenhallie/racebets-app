@@ -10,6 +10,7 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     nextRaces: [],
+    race: [],
     raceFilters: [
       { id: 1, type: 'Dog', active: false, purse: 1000 },
       { id: 2, type: 'Horse', active: false, purse: 2100 },

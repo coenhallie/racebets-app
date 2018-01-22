@@ -39,4 +39,14 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.column {
+        box-shadow: 1px 1px 2px 1px #ccc;
+        margin: 20px;
+        padding: 20px;
+        display: inline-block;
+        width: 300px;
+        vertical-align: top;
+    }
+
 </style>

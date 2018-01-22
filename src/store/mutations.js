@@ -23,5 +23,8 @@ export default {
   },
   fetchRaceData (state, response) {
     console.log('fetchRaceData mutations')
+  },
+  SET_RACE (state, race) {
+    state.race = race
   }
 }
