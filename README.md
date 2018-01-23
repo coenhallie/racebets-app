@@ -1,15 +1,16 @@
 ![Racebets logo](https://github.com/coenhallie/racebets-app/blob/master/src/assets/racebets-logo.jpg?raw=true "Title")
 
 
-> A test app developed for Racebets.com 
+> A test app developed for Racebets.com
 
 ## Techstack used
-___
+
   * Vue.js (Javascript framework)
   * Vuex (State management)
   * Lodash (JavaScript utility library)
   * Axios (Promise based HTTP client for the browser and node.js)
 
+## App layout
 
 ![Racebets interface](https://github.com/coenhallie/racebets-app/blob/master/src/assets/racebets-app.jpg?raw=true "Title")
 
