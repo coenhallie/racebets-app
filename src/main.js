@@ -2,14 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import Buefy from 'buefy'
-import { store } from './store/store'
-import 'buefy/lib/buefy.css'
-import VueSVGIcon from 'vue-svgicon'
-
-Vue.use(VueSVGIcon)
-
-Vue.use(Buefy)
+import store from './store/store'
 
 Vue.config.productionTip = false
 

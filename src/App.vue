@@ -1,18 +1,16 @@
 <template>
   <div id="app">
-    <div class="columns">
-      <div class="column">
-        <RaceFilters></RaceFilters>
-      </div>
-      <div class="column">
-        Second column
-      </div>
-      <div class="column">
-        Third column
-      </div>
-      <div class="column">
-        <NextRaces></NextRaces>
-      </div>
+    <div class="column-filter">
+      <RaceFilters></RaceFilters>
+    </div>
+    <div class="column">
+      <p> Second column</p>
+    </div>
+    <div class="column">
+      <p>Third column</p>
+    </div>
+    <div class="column">
+      <NextRaces></NextRaces>
     </div>
   </div>
 </template>
@@ -40,13 +38,21 @@ export default {
   margin-top: 60px;
 }
 
-.column {
-        box-shadow: 1px 1px 2px 1px #ccc;
-        margin: 20px;
-        padding: 20px;
-        display: inline-block;
-        width: 300px;
-        vertical-align: top;
-    }
+.column-filter {
+  width: 300px;
+  border: 3px solid #393939;
+  display: inline-block;
+  vertical-align: top;
+  min-height:340px;
+  margin:10px;
+}
 
+.column {
+  width: 300px;
+  border: 3px solid #393939;
+  display: inline-block;
+  vertical-align: top;
+  min-height:340px;
+  margin:10px;
+}
 </style>
