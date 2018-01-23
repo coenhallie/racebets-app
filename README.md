@@ -1,5 +1,4 @@
-![Racebets logo](/assets/racebets-logo.jpg?raw=true "Title")
-
+![Racebets logo](https://github.com/coenhallie/racebets-app/blob/master/src/assets/racebets-logo.jpg?raw=true "Title")
 
 
 > A test app developed for Racebets.com 
@@ -12,7 +11,7 @@ ___
   * Axios (Promise based HTTP client for the browser and node.js)
 
 
-![Racebets interface](/assets/racebets-logo.jpg?raw=true "Title")
+![Racebets interface](https://github.com/coenhallie/racebets-app/blob/master/src/assets/racebets-app.jpg?raw=true "Title")
 
 ## Build Setup
 
