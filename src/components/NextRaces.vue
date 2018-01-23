@@ -2,7 +2,7 @@
   <div class="container">
       <div class="grid header">
           <div class="col-2 race-item">
-              <span class="country">{{ get(featuredRace, 'event.country') }}</span>
+              <img class="flag" :src="'/static/flags/' + get(featuredRace, 'event.country') + '.png'" alt="Country">
           </div>
           <div class="col-10 race-item">
               <span class="title">{{ get(featuredRace, 'event.title') }}</span>
@@ -28,7 +28,7 @@
         </div>
         <div class="col-2 race-item">
           <div class="button-wrapper">
-            <a class="button-odds" href=http://www.racebets.com/bet/${featuredRace.id_race}>
+            <a class="button-odds" :href="'http://racebets.com/bet/' + featuredRace.id_race">
               {{ runner.odds }}
             </a>
         </div>
@@ -205,5 +205,9 @@ a {
 
 .purse-currency {
   padding: 5px;
+}
+.flag {
+  width: 32px;
+  height: 20px;
 }
 </style>
