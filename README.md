@@ -1,4 +1,4 @@
-![Racebets logo](assets/racebets-logo.jpg?raw=true "Title")
+![Racebets logo](/assets/racebets-logo.jpg?raw=true "Title")
 
 
 
@@ -10,6 +10,9 @@ ___
   * Vuex (State management)
   * Lodash (JavaScript utility library)
   * Axios (Promise based HTTP client for the browser and node.js)
+
+
+![Racebets interface](/assets/racebets-logo.jpg?raw=true "Title")
 
 ## Build Setup
 
